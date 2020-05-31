@@ -1,19 +1,30 @@
-import java.util.LinkedList;
+package com.durgaprasadmamidi;
 
-public class Stacks {
+import java.util.*;
 
-	public static void main(String[] args) {
-	
-		LinkedList<Integer> ls= new LinkedList<Integer> ();
-		
-		ls.push(1);
-		ls.push(2);
-		ls.push(3);
-		ls.push(4);
-		
-		while(!ls.isEmpty()) {
-			System.out.println(ls.pop());
-		}
-	}
+public class Main {
+
+    public static void main(String[] args) {
+       Stack<String> stack = new Stack<String>();
+       stack.push("first");
+       print(stack);
+       stack.push("second");
+       print(stack);
+       stack.push("third");
+       print(stack);
+       stack.pop();
+       print(stack);
+       stack.pop();
+       print(stack);
+        stack.pop();
+        print(stack);
+    }
+    public static void print(Stack<String> s){
+        if(!s.isEmpty())
+            System.out.println(s+" Top");
+        else
+            System.out.println("stack is empty");
+
+    }
 
 }
